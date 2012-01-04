@@ -8,6 +8,7 @@ gem 'rails', '3.1.3'
 gem 'mysql2'
 gem 'sqlite3'
 gem 'haml-rails'
+gem 'gravatar_image_tag', '1.0.0.pre2'
 
 # Gems used only for assets and not required
 # in production environments by default.
