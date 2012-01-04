@@ -1,6 +1,17 @@
-%h1
-  #{ gravatar_for @user }
-  #{ @user.name }
+%table.profile
+  %tr
+    %td.main
+      %h1
+        #{ gravatar_for @user }
+        #{ @user.name }
 
-#{ @user.email }
+    %td.sidebar.round
+      %strong
+        name
+      #{ @user.name }
+      %br/
 
+      %strong
+        URL
+        #{ link_to user_path(@user), @user }
+        %br/
