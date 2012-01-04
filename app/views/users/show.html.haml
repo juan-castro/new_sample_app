@@ -8,10 +8,10 @@
     %td.sidebar.round
       %strong
         name
-      #{ @user.name }
+      = @user.name
       %br/
 
       %strong
         URL
-        #{ link_to user_path(@user), @user }
-        %br/
+      = link_to user_path(@user), @user
+      %br/

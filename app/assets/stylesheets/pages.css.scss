@@ -16,7 +16,7 @@ $white-color: #fff;
     padding: 0;
 }
 
-p {
+p, h1 {
     margin: 5px 0 15px 0;
 }
 
@@ -144,6 +144,10 @@ td.sidebar {
     background: #ffc;
 }
 
+
+div.field, div.actions {
+    margin-bottom: 10px;
+}
 
 /* Footer */
 
