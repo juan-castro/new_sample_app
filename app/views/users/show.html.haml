@@ -2,16 +2,20 @@
   %tr
     %td.main
       %h1
-        #{ gravatar_for @user }
-        #{ @user.name }
+        = gravatar_for @user
+        = @user.name
+      %p
+        = @user.email
 
     %td.sidebar.round
       %strong
-        name
+        Name:
       = @user.name
       %br/
 
       %strong
-        URL
-      = link_to user_path(@user), @user
+        URL:
+        = link_to user_path(@user), @user
+        / = link_to(@user.name, @user, :class => 'help')
+        / = link_to "test", user_path(@user)
       %br/

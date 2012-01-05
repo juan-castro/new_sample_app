@@ -2,9 +2,9 @@
   Users Page
 
 %ul
-  = @user.each do |u|
-    %li
-      = u.name
+  - @user.each do |u|
+    %li= link_to u.name, user_path(u)
+
 
 
 
