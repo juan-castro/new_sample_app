@@ -12,7 +12,7 @@ $white-color: #fff;
 }
 
 body {
-    font-size: 16px;
+    font-size: 14px;
 }
 
 * {
@@ -205,7 +205,7 @@ div.field, div.actions {
     }
 }
 
-/* Success Message */
+/* Success/Error Message */
 
 .success {
     padding: .8em;
@@ -216,6 +216,18 @@ div.field, div.actions {
 
     a {
         color: #264409;
+    }
+}
+
+.error {
+    padding: .8em;
+    margin-bottom: 1em;
+    border: 2px solid #f5c9d1;
+    background: #fbe5e7;
+    color: #76353c;
+
+    a {
+        color: #76353c;
     }
 }
 
