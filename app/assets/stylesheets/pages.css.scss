@@ -149,6 +149,49 @@ div.field, div.actions {
     margin-bottom: 10px;
 }
 
+
+/* Error Messages */
+
+.field_with_errors {
+    margin-top: 10px;
+    padding: 2px;
+    background: red;
+    display: table;
+
+    lable {
+        color: $white-color;
+    }
+}
+
+#error_explanation {
+    width: 400px;
+    border: 2px solid red;
+    padding: 7px;
+    padding-bottom: 12px;
+    margin-bottom: 20px;
+    background: #f0f0f0;
+
+    h2 {
+        text-align: left;
+        font-weight: bold;
+        padding: 5px 5px 5px 15px;
+        background: #c00;
+        color: $white-color;
+    }
+
+    p{
+        color: #333;
+        margin-bottom: 0;
+        padding: 5px;
+    }
+
+    ul li {
+        font-size: 12px;
+        list-style: square;
+        margin-left: 40px;
+    }
+}
+
 /* Footer */
 
 footer {

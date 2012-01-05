@@ -1,5 +1,9 @@
 class UsersController < ApplicationController
 
+  def index
+    @user = User.all
+  end
+
   def show
     @user = User.find(params[:id])
     @title = @user.name
@@ -10,5 +14,13 @@ class UsersController < ApplicationController
     @user = User.new
   end
 
-
+  def create
+    @user = User.new(params[:user])
+    if @user.save
+      redirect_to user_path(@user), :flash => { :success => "Welcome to the Sample App!" }
+    else
+      render 'new'
+      @title = "Sign up"
+    end
+  end
 end
