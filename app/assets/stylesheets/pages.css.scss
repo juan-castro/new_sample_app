@@ -231,6 +231,18 @@ div.field, div.actions {
     }
 }
 
+.notice {
+    padding: .8em;
+    margin-bottom: 1em;
+    border: 2px solid #e7dc84;
+    background: #fdfac6;
+    color: #6e6831;
+
+    a {
+        color: #6e6831;
+    }
+}
+
 /* Footer */
 
 footer {
