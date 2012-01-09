@@ -1,11 +1,13 @@
 %h1
-  Users Page
+  All Users
 
-%ul
-  - @user.each do |u|
-    %li= link_to u.name, user_path(u)
+= will_paginate
 
+%ul.users
+  - @users.each do |user|
+    = render 'user', :user => user
 
+= will_paginate
 
 
 
