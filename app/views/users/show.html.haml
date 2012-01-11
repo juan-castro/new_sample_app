@@ -4,8 +4,11 @@
       %h1
         = gravatar_for @user
         = @user.name
-      %p
-        = @user.email
+
+      - unless @user.microposts.empty?
+        %table.microposts{:summary => "User microposts"}
+          = render @microposts
+        = will_paginate @microposts
 
     %td.sidebar.round
       %strong
@@ -19,3 +22,7 @@
         / = link_to(@user.name, @user, :class => 'help')
         / = link_to "test", user_path(@user)
       %br/
+
+      %strong
+        Microposts:
+      = @user.microposts.count

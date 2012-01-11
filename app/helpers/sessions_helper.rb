@@ -26,9 +26,13 @@ module SessionsHelper
     user == current_user
   end
 
+  def authenticate
+     deny_access unless signed_in?
+  end
+
   def deny_access
-    flash[:notice] = "Please sign in to access this page."
-    redirect_to signin_path
+    store_location
+    redirect_to signin_path, :notice => "Please sign in to access this page."
   end
 
   def redirect_back_or(default)
